@@ -38,10 +38,10 @@ echo "WindowsNicName: " $WindowsNicName >> ./parameters.vars
 mkdir /etc/ansible
 cp -f ./parameters.vars /etc/ansible
 
-yum install -y dnsmasq
+#yum install -y dnsmasq
 
-systemctl enable dnsmasq.service
-systemctl start dnsmasq.service
+#systemctl enable dnsmasq.service
+#systemctl start dnsmasq.service
 
 swapoff -a
 
@@ -112,7 +112,7 @@ openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 
 openshift_master_manage_htpasswd=false
 
 openshift_master_default_subdomain=$AppPublicURL
-openshift_use_dnsmasq=true
+#openshift_use_dnsmasq=true
 openshift_master_cluster_public_hostname=$OpenShiftPublicURL
 
 osm_default_node_selector="node-role.kubernetes.io/compute=true"
